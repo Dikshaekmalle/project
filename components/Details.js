@@ -3,6 +3,8 @@ import { View,Text,StyleSheet, TouchableOpacity,SafeAreaView, Image ,FlatList, A
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../assets/colors/colors';
+
+
 export default Details=({route,navigation})=>{
 
 const { item } = route.params;
@@ -99,7 +101,7 @@ marginLeft:item.id==='1'?20 : 0,
 <FlatList
         data={item.ingredients}
         renderItem={renderIngredientsItem}
-        keyExtractor={item=>item.id}
+        keyExtractor={(item)=>item.id}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
         
